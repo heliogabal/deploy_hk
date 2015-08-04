@@ -1,18 +1,15 @@
-print "hello"
-print env.user
-
 from fabric.api import *
 import time
 
-#env.user = 'o3.ftp'
-#env.shell = '/bin/bash -c'
+env.user = 'o5.ftp'
+env.shell = '/bin/bash -c'
 
 
 # Download and import a platform using Drush Make
 def build_platform(site, profile, webserver, dbserver, makefile, build):
   print "===> Building the platform..."
-  run("drush make %s /data/disk/o3/static/%s" % (makefile, build))
-  run("drush --root='/data/disk/o3/static/%s' provision-save '@platform_%s' --context_type='platform'" % (build, build))
+  run("drush make %s ~/static/%s" % (makefile, build))
+  run("drush --root='~/o3/static/%s' provision-save '@platform_%s' --context_type='platform'" % (build, build))
   run("drush @hostmaster hosting-import '@platform_%s'" % build)
   run("drush @hostmaster hosting-dispatch")
 

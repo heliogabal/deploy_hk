@@ -4,7 +4,7 @@
 #
 
 # Where our fabfile is
-FABFILE=/home/jenkins/aegir_cid/fabfile2.py
+FABFILE=/home/jenkins/aegir_cid/fabfile.py
 
 HOST=$1
 SITE=$2
