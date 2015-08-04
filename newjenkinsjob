@@ -19,8 +19,8 @@ then
      exit 1
 fi
 
-JENKINS_URL="http://example.com:8080"
-USERNAME="jenkinsbot"
+JENKINS_URL="http://ci.resyst.de:8080"
+USERNAME="rainer"
 PASSWORD="changeme"
 
 TMP_DIR="/tmp/jenkinsJobs"
